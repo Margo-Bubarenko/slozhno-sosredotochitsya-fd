@@ -2,4 +2,41 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-family: 'IBM Plex mono', Arial, Helvetica, sans-serif;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
+.header {
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  background-image: var(--background-image-dark);
+  background-position: center;
+  background-size: cover;
+}
+
+.content-section__title {
+  color: var(--accent-color);
+  margin-block-end: 20px;
+}
+
+.text-block__title {
+  color: var(--main-bg-color);
+  background-color: var(--accent-color);
+  margin-block-end: 10px;
+}
+
+.text-block__subtitle {
+  font-weight: var(--font-weight-normal);
+  background-color: var(--accent-color);
+  color: var(--main-bg-color);
+}
+
+.text-block__content {
+  color: var(--main-text-color);
+}
+
+.content {
+  display: grid;
+  gap: 50px;
 }
