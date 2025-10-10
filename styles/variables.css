@@ -5,4 +5,6 @@
   --font-weight-normal: 400;
   --background-image-dark: url('../images/cover-image-dark.png');
   --background-image-light: url('../images/cover-image-light.png');
+  --header-title-color: #DB00FF;
+  --button-color-active: #FF007066;
 }

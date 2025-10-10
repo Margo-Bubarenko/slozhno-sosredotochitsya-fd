@@ -5,25 +5,97 @@
   font-family: 'IBM Plex mono', Arial, Helvetica, sans-serif;
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
-}
-
-.header {
-  margin-inline-start: 0;
-  margin-inline-end: 0;
   background-image: var(--background-image-dark);
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
+  padding: 10px;
+}
+
+@media (width > 768px) {
+  .page {
+    padding: 20px;
+  }
+}
+
+.header {
+  height: 100vh; 
+  min-height: 668px;
+}
+
+.header-title,
+.footer-title {
+  color: var(--header-title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  font-weight: 700;
+}
+
+@media (width <= 768px) {
+  .header-title,
+  .footer-title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+}
+
+@media (width > 768px) {
+  .header-title,
+  .footer-title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+.header-subtitle {
+  background-color: var(--accent-color);
+  color: var(--main-bg-color);
+  font-size: 18px;
+  line-height: 23.4px;
+  font-family: inherit;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  gap: 13px;
+  justify-self: end;
+}
+
+.header__theme-menu-button {
+  border: solid 1px transparent;
+  color: var(--accent-color);
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:hover {
+  border: solid 1px var(--button-color-active);
+}
+
+.header__theme-menu-button_active {
+  border: solid 1px var(--accent-color);
+  pointer-events: none;
+}
+
+.content-section {
+  font-size: 18px;
+  font-style: normal;
+  line-height: 23.4px;
 }
 
 .content-section__title {
   color: var(--accent-color);
   margin-block-end: 20px;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 .text-block__title {
   color: var(--main-bg-color);
   background-color: var(--accent-color);
-  margin-block-end: 10px;
+  margin-bottom: 9px;
+  font-weight: 700;
+  font-size: 18px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 }
 
 .text-block__subtitle {
@@ -39,4 +111,23 @@
 .content {
   display: grid;
   gap: 50px;
+}
+
+.text-blocks {
+  display: grid;
+  gap: 20px;
+}
+
+
+
+
+
+.footer {
+  height: 100vh;
+  min-height: 668px;
+}
+
+.footer-title {
+  color: var(--header-title-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
