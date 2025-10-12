@@ -80,8 +80,8 @@
 .content {
   display: grid;
   gap: 50px;
-  background-color: var(--main-bg-color);
   padding: 40px 10px 40px;
+  background-color: var(--main-bg-color);
 
   @media (width >= 768px) {
     padding: 60px 20px 60px;
@@ -138,11 +138,11 @@
 }
 
 .text-block__title,
-.text-block__subtitle {  
+.text-block__subtitle {
+  margin-block-end: 10px;  
   color: var(--main-bg-color);
-  background-color: var(--accent-color);
   font-size: 18px;
-  margin-block-end: 10px;
+  background-color: var(--accent-color);
 }
 
 .text-block__title {
@@ -159,8 +159,8 @@
 }
 
 .text-block__content {
-  color: var(--main-text-color);
   margin-block-end: 20px;
+  color: var(--main-text-color);
 }
 
 .text-block__content:last-child {
@@ -177,10 +177,13 @@
 }
 
 .footer {
+  display: grid;
   height: 100vh;
   min-height: 668px;
-  background-color: var(--main-bg-color);
   padding: 10px;
+  background-color: var(--main-bg-color);
+  justify-content: center;
+  align-content: center;
 
   @media (width >= 768px) {
     padding: 20px;
