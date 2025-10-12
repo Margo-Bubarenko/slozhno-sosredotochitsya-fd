@@ -2,9 +2,9 @@
   --main-bg-color: #000028;
   --main-text-color: #F1B2CE;
   --accent-color: #FF0070;
-  --font-weight-normal: 400;
   --background-image-dark: url('../images/cover-image-dark.png');
   --background-image-light: url('../images/cover-image-light.png');
   --header-title-color: #DB00FF;
   --button-color-active: #FF007066;
+  --font-family: 'IBM Plex mono', Arial, Helvetica, sans-serif;
 }

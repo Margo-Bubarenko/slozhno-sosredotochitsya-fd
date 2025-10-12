@@ -1,33 +1,24 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  font-family: 'IBM Plex mono', Arial, Helvetica, sans-serif;
-  background-color: var(--main-bg-color);
   color: var(--main-text-color);
+  font-family: var(--font-family);
   background-image: var(--background-image-dark);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  padding: 10px;
-}
-
-@media (width > 768px) {
-  .page {
-    padding: 20px;
-  }
 }
 
 .header {
   height: 100vh; 
   min-height: 668px;
+  padding: 10px;
 }
 
 .header-title,
 .footer-title {
   color: var(--header-title-color);
-  text-shadow: 4px 4px 0 var(--accent-color);
-  font-weight: 700;
+  font-weight: 700;  
 }
 
 @media (width <= 768px) {
@@ -44,18 +35,27 @@
   }
 }
 
+.header-title {
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.footer-title {
+  color: var(--header-title-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
 .header-subtitle {
-  background-color: var(--accent-color);
   color: var(--main-bg-color);
+  font-family: inherit;
   font-size: 18px;
   line-height: 23.4px;
-  font-family: inherit;
+  background-color: var(--accent-color);
 }
 
 .header__theme-menu-list {
   display: grid;
-  gap: 13px;
   justify-self: end;
+  gap: 13px;
 }
 
 .header__theme-menu-button {
@@ -77,57 +77,113 @@
   pointer-events: none;
 }
 
+.content {
+  display: grid;
+  gap: 50px;
+  background-color: var(--main-bg-color);
+  padding: 40px 10px 40px;
+
+  @media (width >= 768px) {
+    padding: 60px 20px 60px;
+  }
+
+  @media (width >= 1024px) {
+    gap: 80px;
+  }
+}
+
 .content-section {
   font-size: 18px;
   font-style: normal;
   line-height: 23.4px;
+
+  @media (width >= 768px) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+  }
+
+  @media (width >= 1024px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+  }
+}
+
+.causes {
+  .content-section__title {
+    grid-column: 1/ -1;
+    max-width: 236px;
+  }
+
+  .text-blocks {
+    grid-column: 1/ -1;
+
+    @media (width >= 1024px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  } 
 }
 
 .content-section__title {
-  color: var(--accent-color);
   margin-block-end: 20px;
+  color: var(--accent-color);
   font-weight: 700;
   font-size: 18px;
 }
 
-.text-block__title {
+.text-block {
+  display: grid;
+}
+
+.text-block__title,
+.text-block__subtitle {  
   color: var(--main-bg-color);
   background-color: var(--accent-color);
-  margin-bottom: 9px;
+  font-size: 18px;
+  margin-block-end: 10px;
+}
+
+.text-block__title {
   font-weight: 700;
-  font-size: 18px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+  line-height: 23.4px;
+}
+
+.margin {
+  margin-block-end: 20px;
 }
 
 .text-block__subtitle {
-  font-weight: var(--font-weight-normal);
-  background-color: var(--accent-color);
-  color: var(--main-bg-color);
+  font-weight: 400;
 }
 
 .text-block__content {
   color: var(--main-text-color);
+  margin-block-end: 20px;
 }
 
-.content {
-  display: grid;
-  gap: 50px;
+.text-block__content:last-child {
+  margin-block-end: 0;
 }
 
 .text-blocks {
   display: grid;
   gap: 20px;
+
+  @media (width >= 1024px) {
+    grid-column: span 2;
+  }
 }
-
-
-
-
 
 .footer {
   height: 100vh;
   min-height: 668px;
+  background-color: var(--main-bg-color);
+  padding: 10px;
+
+  @media (width >= 768px) {
+    padding: 20px;
+  }
 }
 
-.footer-title {
-  color: var(--header-title-color);
-  text-shadow: 2px 2px 0 var(--accent-color);
-}
