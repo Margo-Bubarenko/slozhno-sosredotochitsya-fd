@@ -74,9 +74,35 @@
   }
 }
 
+.rec-label {
+  display: inline-block;
+  color: var(--accent-color);
+  margin-right: 28px;
+  width: 33px;
+  height: 26px;
+
+  @media (width >= 768px) {
+    margin-top: 10px;
+    margin-right: 38px;
+    line-height: 25px;
+  }
+}
+
 .rec-label::after {
   content: '';
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  position: absolute;
+  right: 19px;
+  top: 18px;
+  box-shadow: 0px 0px 4px 2px #FF0070;
 
+  @media (width >= 768px) {
+    top: 28px;
+    right: 29px;
+  }
 }
 
 .header-subtitle {
