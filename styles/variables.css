@@ -7,4 +7,6 @@
   --header-title-color: #DB00FF;
   --button-color-active: #FF007066;
   --font-family: 'IBM Plex mono', Arial, Helvetica, sans-serif;
+  --main-gap: 10px;
+  --main-line-height: 1.3;
 }
