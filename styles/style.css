@@ -7,6 +7,7 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  background-color: var(--main-bg-color);
 }
 
 .header,
@@ -170,7 +171,6 @@
   display: grid;
   gap: 50px;
   padding: 40px 10px;
-  background-color: var(--main-bg-color);
 
   @media (width >= 768px) {
     padding: 60px 20px;
@@ -324,7 +324,6 @@
 
 .footer {
   display: grid;
-  background-color: var(--main-bg-color);
   justify-content: center;
   align-content: center;
 
