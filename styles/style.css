@@ -159,9 +159,6 @@
 
   @media (width >= 768px) {
     padding: 60px 20px;
-  }
-
-  @media (width >= 1024px) {
     gap: 80px;
   }
 }
@@ -187,7 +184,6 @@
 .causes {
   .content-section__title {
     grid-column: 1/ -1;
-    max-width: 236px;
   }
 
   .text-blocks {
@@ -205,9 +201,16 @@
   color: var(--section-title-color);
   font-weight: 700;
   font-size: 18px;
+  max-width: 100%;
   
   @media (width >= 1024px) {
     min-width: 315px;
+  }
+}
+
+@media (width >= 768px) {
+  .causes .content-section__title {
+    max-width: min-content;
   }
 }
 
