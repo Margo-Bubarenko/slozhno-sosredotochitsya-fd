@@ -3,18 +3,18 @@
 .page {
   color: var(--main-text-color);
   font-family: var(--font-family);
+  background-color: var(--main-bg-color);
   background-image: var(--background-image);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  background-color: var(--main-bg-color);
 }
 
 .header,
 .footer {
+  position: relative;
   height: 100vh;
   min-height: 668px;
-  position: relative;
   padding: 10px;
 
   @media (width >= 768px) { /* Планшеты и десктопы */
@@ -32,7 +32,7 @@
   }
 
   @media (width >= 1024px) {
-    grid-template-rows: 42% 1fr 41%;
+    grid-template-rows: 2fr 1fr 2fr;
   }
 }
 
@@ -40,8 +40,8 @@
 .footer-title {
   color: var(--header-logo-color);
   font-weight: 700;
-  line-height: 83%;
   font-size: var(--logo-size);
+  line-height: 83%;
 }
 
 .header-title {
@@ -65,12 +65,12 @@
 .header__rec::after {
   content: "";
   position: absolute;
-  inline-size: 10px;
-  block-size: 10px;
   margin: -5px -20px 0 0;
   border-radius: 50%;
   box-shadow: 0 0 4px 2px var(--nav-color);
   background-color: var(--nav-color);
+  inline-size: 10px;
+  block-size: 10px;
   inset-inline-end: 0;
   inset-block-start: 50%;
 }
@@ -78,32 +78,32 @@
 .decorated-zone::before {
   content: "";
   position: absolute;
-  inset-block-end: var(--main-gap);
-  inset-inline-start: var(--main-gap);
   width: 25px;
   height: 25px;
   border-inline-start: 1px solid var(--nav-color);
   border-block-end: 1px solid var(--nav-color);
+  inset-block-end: var(--main-gap);
+  inset-inline-start: var(--main-gap);
 }
 
 .decorated-zone::after {
   content: "";
-  inset-block-start: var(--main-gap);
-  inset-inline-end: var(--main-gap);
   position: absolute;
   width: 25px;
   height: 25px;
-  border-right: 1px solid var(--nav-color);
   border-top: 1px solid var(--nav-color);
+  border-right: 1px solid var(--nav-color);
+  inset-block-start: var(--main-gap);
+  inset-inline-end: var(--main-gap);
 }
 
 .header-subtitle {
+  justify-self: end;
   color: var(--header-a-text-block-title-color);
   font-family: inherit;
   font-size: 18px;
   line-height: 23.4px;
   background-color: var(--accent-color);
-  justify-self: end;
 
   @media (width >= 768px) {
     width: clamp(364px, 50%, 491px); /* ширина подзаголовка в шапке */
@@ -122,8 +122,8 @@
   gap: 10px;
 
   @media (width >= 1024px) {
-    justify-self: center;
     grid-template-columns: repeat(3, 1fr);
+    justify-self: center;
   }
 }
 
@@ -133,14 +133,14 @@
 
 .header__theme-menu-button {
   border: solid 1px transparent;
+  padding: 1.5px 13px;
   color: var(--nav-color);
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
+  text-align: center;
   background-color: transparent;
   cursor: pointer;
-  padding: 1.5px 13px;
-  text-align: center;
 }
 
 .header__theme-menu-button:hover {
@@ -158,8 +158,8 @@
   padding: 40px 10px;
 
   @media (width >= 768px) {
-    padding: 60px 20px;
     gap: 80px;
+    padding: 60px 20px;
   }
 }
 
@@ -197,11 +197,11 @@
 }
 
 .content-section__title {
+  max-width: 100%;
   margin-block-end: 20px;
   color: var(--section-title-color);
   font-weight: 700;
   font-size: 18px;
-  max-width: 100%;
   
   @media (width >= 1024px) {
     min-width: 315px;
@@ -302,10 +302,10 @@
 }
 
 .gallery-image {
+  object-fit: cover;
   inline-size: 100%;
   block-size: 100%;
   max-block-size: 100%;
-  object-fit: cover;
 }
 
 @media (width >= 768px) {
