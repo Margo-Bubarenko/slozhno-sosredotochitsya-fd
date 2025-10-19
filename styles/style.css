@@ -13,6 +13,8 @@
 .header,
 .footer {
   position: relative;
+  display: grid;
+  align-items: center;
   height: 100vh;
   min-height: 668px;
   padding: 10px;
@@ -22,10 +24,9 @@
   }
 }
 
-.header {
-  display: grid;
+.header-alignment {  
   grid-template-rows: 35% 1fr 35%;
-  align-items: center;
+  
 
   @media (width >= 768px) {
     grid-template-rows: 45% 1fr 45%;
@@ -36,6 +37,10 @@
   }
 }
 
+.footer-alignment {
+  justify-content: center;
+}
+
 .header-title,
 .footer-title {
   color: var(--header-logo-color);
@@ -44,12 +49,18 @@
   line-height: 83%;
 }
 
-.header-title {
-  text-shadow: 4px 4px 0 var(--accent-color);
-
-  @media (width >= 768px) {
+@media (width >= 768px){
+  .header-title__margin {
     margin-left: -20px;
   }
+}
+
+.header-title__shadow {
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.footer-title__shadow {
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
 
 .header__rec {
@@ -101,6 +112,7 @@
   justify-self: end;
   color: var(--header-a-text-block-title-color);
   font-family: inherit;
+  font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
   background-color: var(--accent-color);
@@ -127,17 +139,15 @@
   }
 }
 
-.header__theme-menu-item {
-  height: 26px;
-}
-
 .header__theme-menu-button {
   border: solid 1px transparent;
-  padding: 1.5px 13px;
-  color: var(--nav-color);
+  padding: 3px 12px;
+  color: var(--nav-color); 
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0; 
   text-align: center;
   background-color: transparent;
   cursor: pointer;
@@ -222,13 +232,14 @@
 .text-block__subtitle {
   margin-block-end: 10px;
   color: var(--header-a-text-block-title-color);
+  font-weight: 700;
   font-size: 18px;
+  line-height: 23.4px;
   background-color: var(--accent-color);
 }
 
-.text-block__title {
-  font-weight: 700;
-  line-height: 23.4px;
+.text-block__subtitle-weight {
+  font-weight: 400;
 }
 
 .margin {
@@ -239,10 +250,6 @@
   .gallery-title {
     margin-block-end: 20px;
   }
-}
-
-.text-block__subtitle {
-  font-weight: 400;
 }
 
 .text-block__content {
@@ -333,19 +340,4 @@
     grid-column: span 2;
     grid-row: 3 / 4;
   }
-}
-
-.footer {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-
-  @media (width >= 768px) {
-    padding: 20px;
-  }
-}
-
-.footer-title {
-  color: var(--header-logo-color);
-  text-shadow: 2px 2px 0 var(--accent-color);
 }
