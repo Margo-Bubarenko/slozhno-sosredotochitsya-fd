@@ -10,8 +10,7 @@
   background-attachment: fixed;
 }
 
-.header,
-.footer {
+.decorated-zone {
   position: relative;
   display: grid;
   align-items: center;
@@ -25,7 +24,7 @@
   }
 }
 
-.header-alignment {
+.header {
   grid-template-rows: 35% 1fr 35%;
 
   @media (width >= 768px) {
@@ -37,12 +36,11 @@
   }
 }
 
-.footer-alignment {
+.footer {
   justify-content: center;
 }
 
-.header-title,
-.footer-title {
+.title {
   color: var(--header-logo-color);
   font-weight: 700;
   font-size: var(--logo-size);
