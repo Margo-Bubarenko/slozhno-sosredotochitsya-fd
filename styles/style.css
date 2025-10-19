@@ -15,9 +15,9 @@
   position: relative;
   display: grid;
   align-items: center;
+  padding: 10px;
   block-size: 100vh;
   min-block-size: 668px;
-  padding: 10px;
 
   @media (width >= 768px) {
     /* Планшеты и десктопы */
@@ -89,10 +89,10 @@
 .decorated-zone::before {
   content: "";
   position: absolute;
-  inline-size: 25px;
-  block-size: 25px;
   border-inline-start: 1px solid var(--nav-color);
   border-block-end: 1px solid var(--nav-color);
+  inline-size: 25px;
+  block-size: 25px;
   inset-block-end: var(--main-gap);
   inset-inline-start: var(--main-gap);
 }
@@ -100,10 +100,10 @@
 .decorated-zone::after {
   content: "";
   position: absolute;
-  inline-size: 25px;
-  block-size: 25px;
   border-top: 1px solid var(--nav-color);
   border-right: 1px solid var(--nav-color);
+  inline-size: 25px;
+  block-size: 25px;
   inset-block-start: var(--main-gap);
   inset-inline-end: var(--main-gap);
 }
@@ -140,8 +140,9 @@
 }
 
 .header__theme-menu-button {
+  min-block-size: 26px;
   border: solid 1px transparent;
-  padding: 3px 12px;
+  padding: 1.5px 12px;
   color: var(--nav-color);
   font-family: inherit;
   font-weight: 400;
