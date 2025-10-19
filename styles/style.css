@@ -15,8 +15,8 @@
   position: relative;
   display: grid;
   align-items: center;
-  height: 100vh;
-  min-height: 668px;
+  block-size: 100vh;
+  min-block-size: 668px;
   padding: 10px;
 
   @media (width >= 768px) {
@@ -89,8 +89,8 @@
 .decorated-zone::before {
   content: "";
   position: absolute;
-  width: 25px;
-  height: 25px;
+  inline-size: 25px;
+  block-size: 25px;
   border-inline-start: 1px solid var(--nav-color);
   border-block-end: 1px solid var(--nav-color);
   inset-block-end: var(--main-gap);
@@ -100,8 +100,8 @@
 .decorated-zone::after {
   content: "";
   position: absolute;
-  width: 25px;
-  height: 25px;
+  inline-size: 25px;
+  block-size: 25px;
   border-top: 1px solid var(--nav-color);
   border-right: 1px solid var(--nav-color);
   inset-block-start: var(--main-gap);
